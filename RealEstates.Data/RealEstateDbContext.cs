@@ -41,7 +41,7 @@ namespace RealEstates.Data
             //при таблицата за връзка много към много така се дефинира композитен ключ от две полета
                    
             modelBuilder.Entity<RealEstatePropertyTag>()
-               .HasKey(x => new { x.PropertyId, x.TagIdId });
+               .HasKey(x => new { x.PropertyId, x.TagId });
         }
     }
 }
