@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RealEstates.Models
+{
+    public class RealEstatePropertyTag
+    {
+        public int PropertyId { get; set; }
+        public virtual RealEstateProperty Property { get; set; }
+        public int TagIdId { get; set; }
+        public virtual Tag Tag { get; set; }
+    }
+}
