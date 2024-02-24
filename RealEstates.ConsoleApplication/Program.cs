@@ -1,10 +1,13 @@
-﻿namespace RealEstates.ConsoleApplication
+﻿using RealEstates.Data;
+
+namespace RealEstates.ConsoleApplication
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var db = new RealEstateDbContext();
+            db.Database.EnsureCreated();
         }
     }
 }
