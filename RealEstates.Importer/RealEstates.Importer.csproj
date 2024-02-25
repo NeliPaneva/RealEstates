@@ -8,10 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="System.Text.Json" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RealEstates.ConsoleApplication\RealEstates.ConsoleApplication.csproj" />
+    <ProjectReference Include="..\RealEstates.Data\RealEstates.Data.csproj" />
     <ProjectReference Include="..\RealEstates.Services\RealEstates.Services.csproj" />
   </ItemGroup>
 
