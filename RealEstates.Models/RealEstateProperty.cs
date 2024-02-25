@@ -14,6 +14,7 @@ namespace RealEstates.Models
             this.Tags=new HashSet<RealEstatePropertyTag>();
         }
         public int Id { get; set; }
+        
         public int Size {  get; set; }
         public int? Floor { get; set; }
         public int? TotalNumbersOfFloors { get; set; }
