@@ -1,0 +1,40 @@
+﻿@model IEnumerable<RealEstates.Services.Models.DistrictVieModel>
+
+
+@{
+    ViewData["Title"] = "Top Districts by price";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h1>Top 10</h1>
+
+<table class="table table-striped table-sm">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>Properties</th>
+            <th>Avg. price</th>
+            <th>Min. price</th>
+            <th>Max. price</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td> @item.PropertiesCount         </td>
+            <td> @item.AveragePrice.ToString("0.00")€           </td>
+            <td> @item.minPrice€      </td>
+            <td> @item.maxPrice€ </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+

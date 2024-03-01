@@ -1,0 +1,70 @@
+﻿@model IEnumerable<RealEstates.Services.Models.PropertyViewModel>
+
+@{
+    ViewData["Title"] = "DoSearch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Search Results</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Size)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Floor)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.District)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuildingType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PropertyType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) 
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size)
+            </td>
+               
+            <td>
+                @Html.DisplayFor(modelItem => item.Floor)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.District)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.BuildingType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>
